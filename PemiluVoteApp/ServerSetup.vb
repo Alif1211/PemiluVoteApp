@@ -119,7 +119,7 @@ Public Class ServerSetup
                         Dim yeornah As DialogResult = MsgBox("Apakah anda ingin melanjutkan sesi sebelumnya?", MsgBoxStyle.YesNo)
                         If yeornah = DialogResult.Yes Then
                             ShouldClose = True
-                            ServerDashboard.Show()
+                            StatForm.Show()
                             Close()
                         End If
                     Else
