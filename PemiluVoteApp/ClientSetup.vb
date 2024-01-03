@@ -9,6 +9,9 @@ Public Class ClientSetup
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Jika ada file yang hilang/tidak ada maka point bertambah satu
+        'Jika file yang dibutuhkan ada, maka point tidak berubah
+        'Point 0 akan meneruskan sesi ke LoginForm
         TextBox2.ScrollBars = ScrollBars.None
         If Directory.Exists("\\" & TextBox1.Text & "\PemiluEVote") = True Then
             TextBox2.Text = "[ ADA ] Folder Server"
@@ -152,38 +155,73 @@ Public Class ClientSetup
             TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Pusat"
         End If
         If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\1.csv") = True Then
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 1"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Riwayat Vote Calon 1"
         Else
             DataCounter = DataCounter + 1
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\1.csv"
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 1"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Calon 1"
         End If
         If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\2.csv") = True Then
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 2"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Riwayat Vote Calon 2"
         Else
             DataCounter = DataCounter + 1
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\2.csv"
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 2"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Calon 2"
         End If
         If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\3.csv") = True Then
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 3"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Riwayat Vote Calon 3"
         Else
             DataCounter = DataCounter + 1
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\3.csv"
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 3"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Calon 3"
         End If
         If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\4.csv") = True Then
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 4"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Riwayat Vote Calon 4"
         Else
             DataCounter = DataCounter + 1
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\4.csv"
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 4"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Calon 4"
         End If
         If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\5.csv") = True Then
-            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 5"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Riwayat Vote Calon 5"
         Else
             DataCounter = DataCounter + 1
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\5.csv"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Riwayat Vote Calon 5"
+        End If
+        If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\1.rst") = True Then
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 1"
+        Else
+            DataCounter = DataCounter + 1
+            MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\1.rst"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 1"
+        End If
+        If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\2.rst") = True Then
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 2"
+        Else
+            DataCounter = DataCounter + 1
+            MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\2.rst"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 2"
+        End If
+        If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\3.rst") = True Then
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 3"
+        Else
+            DataCounter = DataCounter + 1
+            MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\3.rst"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 3"
+        End If
+        If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\4.rst") = True Then
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 4"
+        Else
+            DataCounter = DataCounter + 1
+            MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\4.rst"
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 4"
+        End If
+        If File.Exists("\\" & TextBox1.Text & "\PemiluEVote\resultdata\5.rst") = True Then
+            TextBox2.Text = TextBox2.Text & Environment.NewLine & "[ ADA ] Jumlah Vote Calon 5"
+        Else
+            DataCounter = DataCounter + 1
+            MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote\resultdata\5.rst"
             TextBox2.Text = TextBox2.Text & Environment.NewLine & "[NIHIL] Jumlah Vote Calon 5"
         End If
         Select Case DataCounter
@@ -203,7 +241,7 @@ Public Class ClientSetup
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         LoginForm.Show()
-        StartPage.Close()
+        StartPage.Hide()
         Close()
     End Sub
 End Class

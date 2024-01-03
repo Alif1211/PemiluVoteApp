@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ServerSetup
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class ServerSetup
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -51,6 +52,17 @@ Partial Class ServerSetup
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +107,7 @@ Partial Class ServerSetup
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(491, 98)
+        Me.TextBox4.Location = New System.Drawing.Point(574, 98)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(254, 26)
         Me.TextBox4.TabIndex = 4
@@ -103,7 +115,7 @@ Partial Class ServerSetup
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(491, 232)
+        Me.TextBox5.Location = New System.Drawing.Point(574, 232)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(254, 26)
         Me.TextBox5.TabIndex = 5
@@ -122,7 +134,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Green
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox5.Location = New System.Drawing.Point(385, 195)
+        Me.PictureBox5.Location = New System.Drawing.Point(468, 195)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox5.TabIndex = 1
@@ -142,7 +154,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Green
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox4.Location = New System.Drawing.Point(385, 61)
+        Me.PictureBox4.Location = New System.Drawing.Point(468, 61)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox4.TabIndex = 1
@@ -182,7 +194,7 @@ Partial Class ServerSetup
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(494, 61)
+        Me.Label4.Location = New System.Drawing.Point(577, 61)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 21)
         Me.Label4.TabIndex = 3
@@ -192,7 +204,7 @@ Partial Class ServerSetup
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(494, 195)
+        Me.Label5.Location = New System.Drawing.Point(577, 195)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(91, 21)
         Me.Label5.TabIndex = 3
@@ -237,7 +249,7 @@ Partial Class ServerSetup
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(491, 131)
+        Me.Button4.Location = New System.Drawing.Point(574, 131)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(93, 36)
         Me.Button4.TabIndex = 12
@@ -246,7 +258,7 @@ Partial Class ServerSetup
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(492, 264)
+        Me.Button5.Location = New System.Drawing.Point(575, 264)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(93, 36)
         Me.Button5.TabIndex = 14
@@ -282,7 +294,7 @@ Partial Class ServerSetup
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(590, 131)
+        Me.Button9.Location = New System.Drawing.Point(673, 131)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(93, 36)
         Me.Button9.TabIndex = 13
@@ -291,7 +303,7 @@ Partial Class ServerSetup
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(591, 264)
+        Me.Button10.Location = New System.Drawing.Point(674, 264)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(93, 36)
         Me.Button10.TabIndex = 15
@@ -310,30 +322,125 @@ Partial Class ServerSetup
         '
         'Button11
         '
+        Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Button11.Location = New System.Drawing.Point(659, 440)
+        Me.Button11.Location = New System.Drawing.Point(772, 440)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(129, 44)
-        Me.Button11.TabIndex = 17
+        Me.Button11.TabIndex = 27
         Me.Button11.Text = "Siapkan!"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
         '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Button12.Location = New System.Drawing.Point(524, 440)
+        Me.Button12.Location = New System.Drawing.Point(637, 440)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(129, 44)
-        Me.Button12.TabIndex = 17
+        Me.Button12.TabIndex = 26
         Me.Button12.Text = "Keluar"
         Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(323, 131)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(55, 36)
+        Me.Button13.TabIndex = 16
+        Me.Button13.Text = "Hapus"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(323, 264)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(55, 36)
+        Me.Button14.TabIndex = 17
+        Me.Button14.Text = "Hapus"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(323, 398)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(55, 36)
+        Me.Button15.TabIndex = 18
+        Me.Button15.Text = "Hapus"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(773, 131)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(55, 36)
+        Me.Button16.TabIndex = 19
+        Me.Button16.Text = "Hapus"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(773, 264)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(55, 36)
+        Me.Button17.TabIndex = 20
+        Me.Button17.Text = "Hapus"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(385, 98)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(77, 26)
+        Me.Button18.TabIndex = 21
+        Me.Button18.Text = "Kunci Nama"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(385, 232)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(77, 26)
+        Me.Button19.TabIndex = 22
+        Me.Button19.Text = "Kunci Nama"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(385, 367)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(77, 26)
+        Me.Button20.TabIndex = 23
+        Me.Button20.Text = "Kunci Nama"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(834, 99)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(77, 26)
+        Me.Button21.TabIndex = 24
+        Me.Button21.Text = "Kunci Nama"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
+        'Button22
+        '
+        Me.Button22.Location = New System.Drawing.Point(834, 233)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(77, 26)
+        Me.Button22.TabIndex = 25
+        Me.Button22.Text = "Kunci Nama"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
         '
         'ServerSetup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 496)
+        Me.ClientSize = New System.Drawing.Size(913, 496)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
@@ -346,6 +453,16 @@ Partial Class ServerSetup
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
+        Me.Controls.Add(Me.Button15)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button17)
+        Me.Controls.Add(Me.Button16)
+        Me.Controls.Add(Me.Button20)
+        Me.Controls.Add(Me.Button22)
+        Me.Controls.Add(Me.Button19)
+        Me.Controls.Add(Me.Button21)
+        Me.Controls.Add(Me.Button18)
+        Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
@@ -407,4 +524,15 @@ Partial Class ServerSetup
     Friend WithEvents Label7 As Label
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Button17 As Button
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Button21 As Button
+    Friend WithEvents Button22 As Button
+    Friend WithEvents Timer1 As Timer
 End Class

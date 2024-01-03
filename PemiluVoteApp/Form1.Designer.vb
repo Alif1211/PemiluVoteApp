@@ -77,6 +77,7 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DebugOptions"
+        Me.GroupBox1.Visible = False
         '
         'Button4
         '

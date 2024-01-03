@@ -6,13 +6,28 @@ Public Class ServerSetup
     Dim Foto3Source As String
     Dim Foto4Source As String
     Dim Foto5Source As String
+    Dim VM1Source As String
+    Dim VM2Source As String
+    Dim VM3Source As String
+    Dim VM4Source As String
+    Dim VM5Source As String
     Dim ChosenResource As Integer = 0
+    Dim ShouldClose As Boolean = False
 
 
     Private Sub ServerSetup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ChosenResource = 0
         Label7.Text = "Nama server : " & Environment.MachineName
+        Timer1.Start()
         CheckFile()
+    End Sub
+
+    Private Sub FormClosingPrevention(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+        If ShouldClose = False Then
+            e.Cancel = 1
+        Else
+            e.Cancel = 0
+        End If
     End Sub
 
     Private Sub CheckFile()
@@ -22,26 +37,31 @@ Public Class ServerSetup
                 Try
                     If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\1.jpg") = True Then
                         PictureBox1.BackgroundImage = Image.FromFile("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\1.jpg")
+                        Foto1Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\1.jpg"
                         ChosenResource = ChosenResource + 1
                         Button1.Enabled = False
                     End If
                     If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\2.jpg") = True Then
                         PictureBox2.BackgroundImage = Image.FromFile("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\2.jpg")
+                        Foto2Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\2.jpg"
                         ChosenResource = ChosenResource + 1
                         Button2.Enabled = False
                     End If
                     If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\3.jpg") = True Then
                         PictureBox3.BackgroundImage = Image.FromFile("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\3.jpg")
+                        Foto3Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\3.jpg"
                         ChosenResource = ChosenResource + 1
                         Button3.Enabled = False
                     End If
                     If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\4.jpg") = True Then
                         PictureBox4.BackgroundImage = Image.FromFile("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\4.jpg")
+                        Foto4Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\4.jpg"
                         ChosenResource = ChosenResource + 1
                         Button4.Enabled = False
                     End If
                     If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.jpg") = True Then
                         PictureBox5.BackgroundImage = Image.FromFile("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.jpg")
+                        Foto5Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.jpg"
                         ChosenResource = ChosenResource + 1
                         Button5.Enabled = False
                     End If
@@ -70,7 +90,41 @@ Public Class ServerSetup
                         ChosenResource = ChosenResource + 1
                         TextBox5.Enabled = False
                     End If
-                    MsgBox(ChosenResource & " sumber telah ditemukan!")
+                    If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\1.txt") = True Then
+                        VM1Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\1.txt"
+                        ChosenResource = ChosenResource + 1
+                        Button6.Enabled = False
+                    End If
+                    If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\2.txt") = True Then
+                        VM2Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\2.txt"
+                        ChosenResource = ChosenResource + 1
+                        Button7.Enabled = False
+                    End If
+                    If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\3.txt") = True Then
+                        VM3Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\3.txt"
+                        ChosenResource = ChosenResource + 1
+                        Button8.Enabled = False
+                    End If
+                    If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\4.txt") = True Then
+                        VM4Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\4.txt"
+                        ChosenResource = ChosenResource + 1
+                        Button9.Enabled = False
+                    End If
+                    If File.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.txt") = True Then
+                        VM5Source = "\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.txt"
+                        ChosenResource = ChosenResource + 1
+                        Button10.Enabled = False
+                    End If
+                    If ChosenResource = 15 Then
+                        Dim yeornah As DialogResult = MsgBox("Apakah anda ingin melanjutkan sesi sebelumnya?", MsgBoxStyle.YesNo)
+                        If yeornah = DialogResult.Yes Then
+                            ShouldClose = True
+                            ServerDashboard.Show()
+                            Close()
+                        End If
+                    Else
+                        MsgBox(ChosenResource & " sumber telah ditemukan!")
+                    End If
                 Catch ex As Exception
 
                 End Try
@@ -79,56 +133,336 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        StartPage.Show()
+        ShouldClose = True
         Close()
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        MsgBox("bingo!")
-
+        ServerSetupDoing.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto1 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 1", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto1.ShowDialog = DialogResult.OK Then
             Foto1Source = AskFoto1.FileName
             PictureBox1.BackgroundImage = Image.FromFile(Foto1Source)
+            ChosenResource = ChosenResource + 1
+            Button1.Enabled = False
         End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto2 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 2", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto2.ShowDialog = DialogResult.OK Then
             Foto2Source = AskFoto2.FileName
             PictureBox2.BackgroundImage = Image.FromFile(Foto2Source)
+            ChosenResource = ChosenResource + 1
+            Button2.Enabled = False
         End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto3 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 3", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto3.ShowDialog = DialogResult.OK Then
             Foto3Source = AskFoto3.FileName
             PictureBox3.BackgroundImage = Image.FromFile(Foto3Source)
+            ChosenResource = ChosenResource + 1
+            Button3.Enabled = False
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto4 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 4", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto4.ShowDialog = DialogResult.OK Then
             Foto4Source = AskFoto4.FileName
             PictureBox4.BackgroundImage = Image.FromFile(Foto4Source)
+            ChosenResource = ChosenResource + 1
+            Button4.Enabled = False
         End If
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto5 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 5", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto5.ShowDialog = DialogResult.OK Then
             Foto5Source = AskFoto5.FileName
             PictureBox5.BackgroundImage = Image.FromFile(Foto5Source)
+            ChosenResource = ChosenResource + 1
+            Button5.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim AskVM1 As New OpenFileDialog With {.Title = "Pilihlah visi misi calon No. 1", .DefaultExt = "C:\", .Filter = "Teks (TXT)|*.txt"}
+        If AskVM1.ShowDialog = DialogResult.OK Then
+            VM1Source = AskVM1.FileName
+            ChosenResource = ChosenResource + 1
+            Button6.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim AskVM2 As New OpenFileDialog With {.Title = "Pilihlah visi misi calon No. 2", .DefaultExt = "C:\", .Filter = "Teks (TXT)|*.txt"}
+        If AskVM2.ShowDialog = DialogResult.OK Then
+            VM2Source = AskVM2.FileName
+            ChosenResource = ChosenResource + 1
+            Button7.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim AskVM3 As New OpenFileDialog With {.Title = "Pilihlah visi misi calon No. 3", .DefaultExt = "C:\", .Filter = "Teks (TXT)|*.txt"}
+        If AskVM3.ShowDialog = DialogResult.OK Then
+            VM3Source = AskVM3.FileName
+            ChosenResource = ChosenResource + 1
+            Button8.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim AskVM4 As New OpenFileDialog With {.Title = "Pilihlah visi misi calon No. 4", .DefaultExt = "C:\", .Filter = "Teks (TXT)|*.txt"}
+        If AskVM4.ShowDialog = DialogResult.OK Then
+            VM4Source = AskVM4.FileName
+            ChosenResource = ChosenResource + 1
+            Button9.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim AskVM5 As New OpenFileDialog With {.Title = "Pilihlah visi misi calon No. 5", .DefaultExt = "C:\", .Filter = "Teks (TXT)|*.txt"}
+        If AskVM5.ShowDialog = DialogResult.OK Then
+            VM4Source = AskVM5.FileName
+            ChosenResource = ChosenResource + 1
+            Button10.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Dim result As DialogResult = MsgBox("Apakah anda yakin?" & Environment.NewLine & "Apabila ada data yang sudah anda, data tersebut akan terhapus dari folder admin", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Dim BA As Integer = ChosenResource
+            If IsNothing(PictureBox1.BackgroundImage) = False Then
+                PictureBox1.BackgroundImage = Nothing
+                Foto1Source = Nothing
+                Button1.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If TextBox1.Enabled = False Then
+                TextBox1.Text = Nothing
+                TextBox1.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If Not VM1Source = Nothing Then
+                VM1Source = Nothing
+                Button6.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If BA = ChosenResource Then
+                Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
+                If result2 = MsgBoxResult.Yes Then
+                    DeleteTheDamnFile(1)
+                End If
+            End If
+            'ShouldClose = True
+            'Close()
+            'ServerSetupDelete.Show()
+            'ServerSetupDelete.WhichOne = 1
+            'Threading.Thread.Sleep(100)
+            'DeleteTheDamnFile(ServerSetupDelete.WhichOne)
+        End If
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Dim result As DialogResult = MsgBox("Apakah anda yakin?" & Environment.NewLine & "Apabila ada data yang sudah anda, data tersebut akan terhapus dari folder admin", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Dim BA As Integer = ChosenResource
+            If IsNothing(PictureBox2.BackgroundImage) = False Then
+                PictureBox2.BackgroundImage = Nothing
+                Foto2Source = Nothing
+                Button2.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If TextBox2.Enabled = False Then
+                TextBox2.Text = Nothing
+                TextBox2.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If Not VM2Source = Nothing Then
+                VM2Source = Nothing
+                Button7.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If BA = ChosenResource Then
+                Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
+                If result2 = MsgBoxResult.Yes Then
+                    DeleteTheDamnFile(2)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim result As DialogResult = MsgBox("Apakah anda yakin?" & Environment.NewLine & "Apabila ada data yang sudah anda, data tersebut akan terhapus dari folder admin", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Dim BA As Integer = ChosenResource
+            If IsNothing(PictureBox3.BackgroundImage) = False Then
+                PictureBox3.BackgroundImage = Nothing
+                Foto3Source = Nothing
+                Button3.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If TextBox3.Enabled = False Then
+                TextBox3.Text = Nothing
+                TextBox3.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If Not VM3Source = Nothing Then
+                VM3Source = Nothing
+                Button8.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If BA = ChosenResource Then
+                Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
+                If result2 = MsgBoxResult.Yes Then
+                    DeleteTheDamnFile(3)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        Dim result As DialogResult = MsgBox("Apakah anda yakin?" & Environment.NewLine & "Apabila ada data yang sudah anda, data tersebut akan terhapus dari folder admin", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Dim BA As Integer = ChosenResource
+            If IsNothing(PictureBox4.BackgroundImage) = False Then
+                PictureBox4.BackgroundImage = Nothing
+                Foto4Source = Nothing
+                Button4.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If TextBox4.Enabled = False Then
+                TextBox4.Text = Nothing
+                TextBox4.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If Not VM4Source = Nothing Then
+                VM4Source = Nothing
+                Button9.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If BA = ChosenResource Then
+                Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
+                If result2 = MsgBoxResult.Yes Then
+                    DeleteTheDamnFile(4)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        Dim result As DialogResult = MsgBox("Apakah anda yakin?" & Environment.NewLine & "Apabila ada data yang sudah anda, data tersebut akan terhapus dari folder admin", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Dim BA As Integer = ChosenResource
+            If IsNothing(PictureBox5.BackgroundImage) = False Then
+                PictureBox5.BackgroundImage = Nothing
+                Foto5Source = Nothing
+                Button5.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If TextBox5.Enabled = False Then
+                TextBox5.Text = Nothing
+                TextBox5.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If Not VM5Source = Nothing Then
+                VM5Source = Nothing
+                Button10.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+            If BA = ChosenResource Then
+                Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
+                If result2 = MsgBoxResult.Yes Then
+                    DeleteTheDamnFile(5)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        If Not TextBox1.Text = Nothing Then
+            If TextBox1.Enabled = True Then
+                TextBox1.Enabled = False
+                ChosenResource = ChosenResource + 1
+            Else
+                TextBox1.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+        Else
+            MsgBox("Masukkan Nama!")
+        End If
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        If Not TextBox2.Text = Nothing Then
+            If TextBox2.Enabled = True Then
+                TextBox2.Enabled = False
+                ChosenResource = ChosenResource + 1
+            Else
+                TextBox2.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+        Else
+            MsgBox("Masukkan Nama!")
+        End If
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        If Not TextBox3.Text = Nothing Then
+            If TextBox3.Enabled = True Then
+                TextBox3.Enabled = False
+                ChosenResource = ChosenResource + 1
+            Else
+                TextBox3.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+        Else
+            MsgBox("Masukkan Nama!")
+        End If
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        If Not TextBox4.Text = Nothing Then
+            If TextBox4.Enabled = True Then
+                TextBox4.Enabled = False
+                ChosenResource = ChosenResource + 1
+            Else
+                TextBox4.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+        Else
+            MsgBox("Masukkan Nama!")
+        End If
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        If Not TextBox5.Text = Nothing Then
+            If TextBox5.Enabled = True Then
+                TextBox5.Enabled = False
+                ChosenResource = ChosenResource + 1
+            Else
+                TextBox5.Enabled = True
+                ChosenResource = ChosenResource - 1
+            End If
+        Else
+            MsgBox("Masukkan Nama!")
+        End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If ChosenResource = 15 Then
+            Button11.Enabled = True
+        Else
+            Button11.Enabled = False
         End If
     End Sub
 End Class
