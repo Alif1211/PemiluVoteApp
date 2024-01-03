@@ -88,6 +88,7 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto1 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 1", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto1.ShowDialog = DialogResult.OK Then
             Foto1Source = AskFoto1.FileName
@@ -96,6 +97,7 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto2 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 2", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto2.ShowDialog = DialogResult.OK Then
             Foto2Source = AskFoto2.FileName
@@ -104,6 +106,7 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto3 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 3", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto3.ShowDialog = DialogResult.OK Then
             Foto3Source = AskFoto3.FileName
@@ -112,6 +115,7 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto4 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 4", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto4.ShowDialog = DialogResult.OK Then
             Foto4Source = AskFoto4.FileName
@@ -120,6 +124,7 @@ Public Class ServerSetup
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        MsgBox("Hati hati! Pemilihan foto ini hanya bisa dilakukan satu kali!", MsgBoxStyle.OkOnly, "Perhatian!")
         Dim AskFoto5 As New OpenFileDialog With {.Title = "Pilihlah foto calon No. 5", .DefaultExt = "C:\", .Filter = "File Gambar/Foto (JPG)|*.jpg"}
         If AskFoto5.ShowDialog = DialogResult.OK Then
             Foto5Source = AskFoto5.FileName

@@ -55,6 +55,24 @@ Public Class StatForm
 
                     DataGridView1.Rows.Add(Row1)
                 End While
+            Case 1
+                Dim TextFieldParser1 As New FileIO.TextFieldParser("\\" & Environment.MachineName & "\PemiluEVote\resultdata\1.csv")
+
+                TextFieldParser1.Delimiters = New String() {","}
+
+                While Not TextFieldParser1.EndOfData
+                    Dim Row1 As String() = TextFieldParser1.ReadFields()
+
+                    If DataGridView1.Columns.Count = 0 AndAlso Row1.Count > 0 Then
+                        Dim i As Integer
+
+                        For i = 0 To Row1.Count - 1
+                            DataGridView1.Columns.Add("Column" & i + 1, "Column" & i + 1)
+                        Next
+                    End If
+
+                    DataGridView1.Rows.Add(Row1)
+                End While
         End Select
         DataGridView1.CurrentCell = DataGridView1.Rows(DataGridView1.Rows.Count - 1).Cells(DataGridView1.CurrentCell.ColumnIndex)
     End Sub
@@ -70,27 +88,27 @@ Public Class StatForm
                 Timer1.Start()
                 Spawn(DataTypes)
             Case "No. 1"
-                DataTypes = 0
+                DataTypes = 1
                 DataDelay = TimeOfDay.Second
                 Timer1.Start()
                 Spawn(DataTypes)
             Case "No. 2"
-                DataTypes = 0
+                DataTypes = 2
                 DataDelay = TimeOfDay.Second
                 Timer1.Start()
                 Spawn(DataTypes)
             Case "Pusat"
-                DataTypes = 0
+                DataTypes = 3
                 DataDelay = TimeOfDay.Second
                 Timer1.Start()
                 Spawn(DataTypes)
             Case "Pusat"
-                DataTypes = 0
+                DataTypes = 4
                 DataDelay = TimeOfDay.Second
                 Timer1.Start()
                 Spawn(DataTypes)
             Case "Pusat"
-                DataTypes = 0
+                DataTypes = 5
                 DataDelay = TimeOfDay.Second
                 Timer1.Start()
                 Spawn(DataTypes)

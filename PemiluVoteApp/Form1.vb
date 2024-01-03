@@ -120,8 +120,38 @@ Public Class Form1
         If DelaySend = 10 Then
             Try
                 Dim MasterData As String = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\masterdata.csv")
+                Dim SingleData As String
                 MasterData = MasterData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                Select Case VarCentre.Userbase(4)
+                    Case 1
+                        SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.csv")
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                    Case 2
+                        SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.csv")
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                    Case 3
+                        SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.csv")
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                    Case 4
+                        SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.csv")
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                    Case 5
+                        SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.csv")
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                End Select
                 File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\masterdata.csv", MasterData)
+                Select Case VarCentre.Userbase(4)
+                    Case 1
+                        File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.csv", SingleData)
+                    Case 2
+                        File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.csv", SingleData)
+                    Case 3
+                        File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.csv", SingleData)
+                    Case 4
+                        File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.csv", SingleData)
+                    Case 5
+                        File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.csv", SingleData)
+                End Select
                 File.WriteAllLines("\\" & VarCentre.Hostname & "\PemiluEVote\userdata\" & VarCentre.Userbase(0) & ".udb", VarCentre.Userbase)
                 DelaySend = 0
                 Timer1.Stop()
