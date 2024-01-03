@@ -194,6 +194,7 @@ Partial Class Form1
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackgroundImage = Global.PemiluVoteApp.My.Resources.Resources._nothing
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(54, 120)
         Me.PictureBox1.Name = "PictureBox1"

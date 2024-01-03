@@ -4,11 +4,32 @@ Public Class StatForm
     Dim DataDelay As Integer
     Dim DataTypes As Integer
     Private Sub StatForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Chart1.Series("Jumlah Pemilih").Points.Clear()
+        Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\1.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst"))
+        Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\2.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst"))
+        Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\3.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst"))
+        Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\4.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst"))
+        Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\5.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst"))
+        PictureBox1.BackgroundImage = Image.FromFile("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\1.jpg")
+        PictureBox2.BackgroundImage = Image.FromFile("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\2.jpg")
+        PictureBox3.BackgroundImage = Image.FromFile("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\3.jpg")
+        PictureBox4.BackgroundImage = Image.FromFile("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\4.jpg")
+        PictureBox5.BackgroundImage = Image.FromFile("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\5.jpg")
+        Label2.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst")
+        Label3.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst")
+        Label4.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst")
+        Label5.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst")
+        Label6.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst")
     End Sub
 
     Private Sub FormClosingPrevention(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
-        'Put necessary code here
+        Dim resultx As DialogResult = MsgBox("Apakah anda yakin ingin keluar?", MsgBoxStyle.YesNo, "Yakin?")
+        If resultx = DialogResult.Yes Then
+            e.Cancel = 0
+            End
+        Else
+            e.Cancel = 1
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -23,6 +44,17 @@ Public Class StatForm
                     DataDelay = DataDelay + 18
                 End If
                 Spawn(DataTypes)
+                Chart1.Series("Jumlah Pemilih").Points.Clear()
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\1.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\2.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\3.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\4.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\5.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst"))
+                Label2.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst")
+                Label3.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst")
+                Label4.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst")
+                Label5.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst")
+                Label6.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst")
             End If
         Else
             If TimeOfDay.Second = DataDelay + 15 Then
@@ -35,6 +67,17 @@ Public Class StatForm
                     DataDelay = DataDelay + 18
                 End If
                 Spawn(DataTypes)
+                Chart1.Series("Jumlah Pemilih").Points.Clear()
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\1.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\2.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\3.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\4.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst"))
+                Chart1.Series("Jumlah Pemilih").Points.AddXY(File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\candidatedata\5.idb"), File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst"))
+                Label2.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst")
+                Label3.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst")
+                Label4.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst")
+                Label5.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst")
+                Label6.Text = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst")
             End If
         End If
     End Sub

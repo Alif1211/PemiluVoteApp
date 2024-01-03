@@ -16,7 +16,7 @@ Public Class ClientSetup
         If Directory.Exists("\\" & TextBox1.Text & "\PemiluEVote") = True Then
             TextBox2.Text = "[ ADA ] Folder Server"
         Else
-            DataCounter = DataCounter - 25
+            DataCounter = DataCounter - 26
             MissingFiles = MissingFiles & Environment.NewLine & "\\" & TextBox1.Text & "\PemiluEVote"
             TextBox2.Text = "[NIHIL] Folder Server"
         End If

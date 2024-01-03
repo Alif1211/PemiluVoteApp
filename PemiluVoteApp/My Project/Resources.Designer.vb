@@ -61,12 +61,127 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan
+        '''.
+        '''</summary>
+        Friend ReadOnly Property _1csv() As String
+            Get
+                Return ResourceManager.GetString("_1csv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _1rst() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_1rst", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan.
+        '''</summary>
+        Friend ReadOnly Property _2csv() As String
+            Get
+                Return ResourceManager.GetString("_2csv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _2rst() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_2rst", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan.
+        '''</summary>
+        Friend ReadOnly Property _3csv() As String
+            Get
+                Return ResourceManager.GetString("_3csv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3rst() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3rst", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan.
+        '''</summary>
+        Friend ReadOnly Property _4csv() As String
+            Get
+                Return ResourceManager.GetString("_4csv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _4rst() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_4rst", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan.
+        '''</summary>
+        Friend ReadOnly Property _5csv() As String
+            Get
+                Return ResourceManager.GetString("_5csv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _5rst() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_5rst", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _320180285() As System.Drawing.Bitmap
+        Friend ReadOnly Property _nothing() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("320180285", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_nothing", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property creator() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("creator", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Jam,NIPM,Nama,Kelas/Jabatan,Pilihan.
+        '''</summary>
+        Friend ReadOnly Property masterdata() As String
+            Get
+                Return ResourceManager.GetString("masterdata", resourceCulture)
             End Get
         End Property
     End Module
