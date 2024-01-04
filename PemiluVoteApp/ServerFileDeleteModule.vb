@@ -54,7 +54,6 @@ Module ServerFileDeleteModule
                     File.Delete("\\" & Environment.MachineName & "\PemiluEVote\candidatedata\5.txt")
                 End If
         End Select
-        ServerSetupDelete.Close()
         ServerSetup.Show()
     End Sub
 End Module

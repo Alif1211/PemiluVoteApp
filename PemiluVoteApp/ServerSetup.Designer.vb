@@ -63,6 +63,7 @@ Partial Class ServerSetup
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,7 +84,7 @@ Partial Class ServerSetup
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(125, 98)
+        Me.TextBox1.Location = New System.Drawing.Point(125, 113)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(254, 26)
         Me.TextBox1.TabIndex = 1
@@ -91,7 +92,7 @@ Partial Class ServerSetup
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(125, 232)
+        Me.TextBox2.Location = New System.Drawing.Point(125, 247)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(254, 26)
         Me.TextBox2.TabIndex = 2
@@ -99,7 +100,7 @@ Partial Class ServerSetup
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(124, 366)
+        Me.TextBox3.Location = New System.Drawing.Point(124, 381)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(254, 26)
         Me.TextBox3.TabIndex = 3
@@ -107,7 +108,7 @@ Partial Class ServerSetup
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(574, 98)
+        Me.TextBox4.Location = New System.Drawing.Point(574, 113)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(254, 26)
         Me.TextBox4.TabIndex = 4
@@ -115,7 +116,7 @@ Partial Class ServerSetup
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(574, 232)
+        Me.TextBox5.Location = New System.Drawing.Point(574, 247)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(254, 26)
         Me.TextBox5.TabIndex = 5
@@ -124,7 +125,7 @@ Partial Class ServerSetup
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(127, 61)
+        Me.Label2.Location = New System.Drawing.Point(127, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(91, 21)
         Me.Label2.TabIndex = 3
@@ -134,7 +135,7 @@ Partial Class ServerSetup
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(127, 195)
+        Me.Label3.Location = New System.Drawing.Point(127, 210)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 21)
         Me.Label3.TabIndex = 3
@@ -144,7 +145,7 @@ Partial Class ServerSetup
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(577, 61)
+        Me.Label4.Location = New System.Drawing.Point(577, 76)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 21)
         Me.Label4.TabIndex = 3
@@ -154,7 +155,7 @@ Partial Class ServerSetup
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(577, 195)
+        Me.Label5.Location = New System.Drawing.Point(577, 210)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(91, 21)
         Me.Label5.TabIndex = 3
@@ -164,7 +165,7 @@ Partial Class ServerSetup
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(127, 329)
+        Me.Label6.Location = New System.Drawing.Point(127, 344)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 21)
         Me.Label6.TabIndex = 3
@@ -172,7 +173,7 @@ Partial Class ServerSetup
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(125, 131)
+        Me.Button1.Location = New System.Drawing.Point(125, 146)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(93, 36)
         Me.Button1.TabIndex = 6
@@ -181,7 +182,7 @@ Partial Class ServerSetup
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(124, 264)
+        Me.Button2.Location = New System.Drawing.Point(124, 279)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(93, 36)
         Me.Button2.TabIndex = 8
@@ -190,7 +191,7 @@ Partial Class ServerSetup
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(125, 398)
+        Me.Button3.Location = New System.Drawing.Point(125, 413)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(93, 36)
         Me.Button3.TabIndex = 10
@@ -199,7 +200,7 @@ Partial Class ServerSetup
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(574, 131)
+        Me.Button4.Location = New System.Drawing.Point(574, 146)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(93, 36)
         Me.Button4.TabIndex = 12
@@ -208,7 +209,7 @@ Partial Class ServerSetup
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(575, 264)
+        Me.Button5.Location = New System.Drawing.Point(575, 279)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(93, 36)
         Me.Button5.TabIndex = 14
@@ -217,7 +218,7 @@ Partial Class ServerSetup
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(224, 131)
+        Me.Button6.Location = New System.Drawing.Point(224, 146)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(93, 36)
         Me.Button6.TabIndex = 7
@@ -226,7 +227,7 @@ Partial Class ServerSetup
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(224, 264)
+        Me.Button7.Location = New System.Drawing.Point(224, 279)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(93, 36)
         Me.Button7.TabIndex = 9
@@ -235,7 +236,7 @@ Partial Class ServerSetup
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(224, 398)
+        Me.Button8.Location = New System.Drawing.Point(224, 413)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(93, 36)
         Me.Button8.TabIndex = 11
@@ -244,7 +245,7 @@ Partial Class ServerSetup
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(673, 131)
+        Me.Button9.Location = New System.Drawing.Point(673, 146)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(93, 36)
         Me.Button9.TabIndex = 13
@@ -253,7 +254,7 @@ Partial Class ServerSetup
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(674, 264)
+        Me.Button10.Location = New System.Drawing.Point(674, 279)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(93, 36)
         Me.Button10.TabIndex = 15
@@ -264,7 +265,7 @@ Partial Class ServerSetup
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Label7.Location = New System.Drawing.Point(431, 20)
+        Me.Label7.Location = New System.Drawing.Point(464, 9)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(93, 19)
         Me.Label7.TabIndex = 16
@@ -294,7 +295,7 @@ Partial Class ServerSetup
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(323, 131)
+        Me.Button13.Location = New System.Drawing.Point(323, 146)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(55, 36)
         Me.Button13.TabIndex = 16
@@ -303,7 +304,7 @@ Partial Class ServerSetup
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(323, 264)
+        Me.Button14.Location = New System.Drawing.Point(323, 279)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(55, 36)
         Me.Button14.TabIndex = 17
@@ -312,7 +313,7 @@ Partial Class ServerSetup
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(323, 398)
+        Me.Button15.Location = New System.Drawing.Point(323, 413)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(55, 36)
         Me.Button15.TabIndex = 18
@@ -321,7 +322,7 @@ Partial Class ServerSetup
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(773, 131)
+        Me.Button16.Location = New System.Drawing.Point(773, 146)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(55, 36)
         Me.Button16.TabIndex = 19
@@ -330,7 +331,7 @@ Partial Class ServerSetup
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(773, 264)
+        Me.Button17.Location = New System.Drawing.Point(773, 279)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(55, 36)
         Me.Button17.TabIndex = 20
@@ -339,7 +340,7 @@ Partial Class ServerSetup
         '
         'Button18
         '
-        Me.Button18.Location = New System.Drawing.Point(385, 98)
+        Me.Button18.Location = New System.Drawing.Point(385, 113)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(77, 26)
         Me.Button18.TabIndex = 21
@@ -348,7 +349,7 @@ Partial Class ServerSetup
         '
         'Button19
         '
-        Me.Button19.Location = New System.Drawing.Point(385, 232)
+        Me.Button19.Location = New System.Drawing.Point(385, 247)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(77, 26)
         Me.Button19.TabIndex = 22
@@ -357,7 +358,7 @@ Partial Class ServerSetup
         '
         'Button20
         '
-        Me.Button20.Location = New System.Drawing.Point(385, 367)
+        Me.Button20.Location = New System.Drawing.Point(385, 382)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(77, 26)
         Me.Button20.TabIndex = 23
@@ -366,7 +367,7 @@ Partial Class ServerSetup
         '
         'Button21
         '
-        Me.Button21.Location = New System.Drawing.Point(834, 99)
+        Me.Button21.Location = New System.Drawing.Point(834, 114)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(77, 26)
         Me.Button21.TabIndex = 24
@@ -375,7 +376,7 @@ Partial Class ServerSetup
         '
         'Button22
         '
-        Me.Button22.Location = New System.Drawing.Point(834, 233)
+        Me.Button22.Location = New System.Drawing.Point(834, 248)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(77, 26)
         Me.Button22.TabIndex = 25
@@ -389,7 +390,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Green
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Location = New System.Drawing.Point(18, 329)
+        Me.PictureBox3.Location = New System.Drawing.Point(18, 344)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox3.TabIndex = 1
@@ -399,7 +400,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Green
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox5.Location = New System.Drawing.Point(468, 195)
+        Me.PictureBox5.Location = New System.Drawing.Point(468, 210)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox5.TabIndex = 1
@@ -409,7 +410,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Green
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(18, 195)
+        Me.PictureBox2.Location = New System.Drawing.Point(18, 210)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox2.TabIndex = 1
@@ -419,7 +420,7 @@ Partial Class ServerSetup
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Green
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox4.Location = New System.Drawing.Point(468, 61)
+        Me.PictureBox4.Location = New System.Drawing.Point(468, 76)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox4.TabIndex = 1
@@ -429,11 +430,21 @@ Partial Class ServerSetup
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Green
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(18, 61)
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 76)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 125)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label8.Location = New System.Drawing.Point(464, 35)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(415, 19)
+        Me.Label8.TabIndex = 33
+        Me.Label8.Text = "Nama server diatas perlu diingat untuk ditulis di Pengaturan Client"
         '
         'ServerSetup
         '
@@ -442,6 +453,7 @@ Partial Class ServerSetup
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(913, 496)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Label7)
@@ -535,4 +547,5 @@ Partial Class ServerSetup
     Friend WithEvents Button21 As Button
     Friend WithEvents Button22 As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label8 As Label
 End Class

@@ -468,14 +468,4 @@ Public Class ServerSetup
             Button11.Enabled = False
         End If
     End Sub
-
-    Private Sub Button23_Click(sender As Object, e As EventArgs)
-        Dim result2 As DialogResult = MsgBox("Apakah anda yakin untuk menghapus file kandidat yang sudah ada?", MsgBoxStyle.YesNo)
-        If result2 = MsgBoxResult.Yes Then
-            ShouldClose = True
-            ServerSetupDelete.Show()
-            Close()
-            DeleteTheDamnFile(1)
-        End If
-    End Sub
 End Class

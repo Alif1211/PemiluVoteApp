@@ -102,7 +102,7 @@ Partial Class ClientSetup
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "ClientSetup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ClientSetup"
+        Me.Text = "Pengaturan Client"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

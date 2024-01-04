@@ -28,9 +28,8 @@ Partial Class StartPage
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -54,7 +53,7 @@ Partial Class StartPage
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(17, 82)
+        Me.Button1.Location = New System.Drawing.Point(17, 87)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 63)
         Me.Button1.TabIndex = 2
@@ -63,7 +62,7 @@ Partial Class StartPage
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(17, 151)
+        Me.Button2.Location = New System.Drawing.Point(17, 172)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 63)
         Me.Button2.TabIndex = 3
@@ -72,7 +71,7 @@ Partial Class StartPage
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(98, 82)
+        Me.Label3.Location = New System.Drawing.Point(98, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(314, 63)
         Me.Label3.TabIndex = 4
@@ -82,32 +81,13 @@ Partial Class StartPage
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(98, 151)
+        Me.Label4.Location = New System.Drawing.Point(98, 172)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(314, 63)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Pilihlah opsi ini apabila PC ini digunakan untuk memilih calon." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Apabila anda mem" &
     "ilih ini, diharapkan untuk sudah mempersipakan foto, nama, dan visi misi calon d" &
     "i PC server"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(17, 220)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 63)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Offline Mode"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.Location = New System.Drawing.Point(98, 220)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(314, 63)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Pilihlah opsi ini apabila anda menggunakan PC ini hanya untuk satu orang atau sat" &
-    "u tempat dalam memilih." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contoh : Hanya untuk pimpinan Pesantren, instansi terte" &
-    "ntu"
         '
         'Button4
         '
@@ -118,6 +98,16 @@ Partial Class StartPage
         Me.Button4.Text = "Keluar"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label5.Location = New System.Drawing.Point(14, 294)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(228, 17)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "(C) 2024, Alif Muhammad Mumtaaz"
+        '
         'StartPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,9 +115,8 @@ Partial Class StartPage
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(424, 326)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button2)
@@ -150,7 +139,6 @@ Partial Class StartPage
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label5 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents Label5 As Label
 End Class

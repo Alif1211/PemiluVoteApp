@@ -3,9 +3,26 @@
 Public Class ClientSetup
     Private DataCounter As Integer = 0
     Private MissingFiles As String = "Berikut ada file/folder yang tidak ada :"
+    Private ShouldClose As Boolean = False
+    Private ReallyClose As Boolean = False
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ShouldClose = True
         Close()
+    End Sub
+
+    Private Sub FormClosingPrevention(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+        If ShouldClose = False Then
+            e.Cancel = 1
+        Else
+            If ReallyClose = True Then
+                e.Cancel = 0
+            Else
+                StartPage.Show()
+                e.Cancel = 0
+            End If
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
