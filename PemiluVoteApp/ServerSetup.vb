@@ -115,6 +115,7 @@ Public Class ServerSetup
                         ChosenResource = ChosenResource + 1
                         Button10.Enabled = False
                     End If
+                    VarCentre.Hostname = Environment.MachineName
                     If ChosenResource = 15 Then
                         Dim yeornah As DialogResult = MsgBox("Apakah anda ingin melanjutkan sesi sebelumnya?", MsgBoxStyle.YesNo)
                         If yeornah = DialogResult.Yes Then
@@ -146,6 +147,7 @@ Public Class ServerSetup
         If Directory.Exists("\\" & Environment.MachineName & "\PemiluEVote\candidatedata") = False Then
             Directory.CreateDirectory("\\" & Environment.MachineName & "\PemiluEVote\candidatedata")
         End If
+        VarCentre.Hostname = Environment.MachineName
         PictureBox1.BackgroundImage = Nothing
         PictureBox2.BackgroundImage = Nothing
         PictureBox3.BackgroundImage = Nothing
