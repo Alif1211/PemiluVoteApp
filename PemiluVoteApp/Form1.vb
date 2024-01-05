@@ -122,33 +122,33 @@ Public Class Form1
                 Dim MasterData As String = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\masterdata.csv")
                 Dim SingleData As String
                 Dim SingleCount As Integer
-                MasterData = MasterData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                MasterData = MasterData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                 Select Case VarCentre.Userbase(4)
                     Case 1
                         SingleCount = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.rst")
                         SingleCount = SingleCount + 1
                         SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\1.csv")
-                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                     Case 2
                         SingleCount = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.rst")
                         SingleCount = SingleCount + 1
                         SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\2.csv")
-                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                     Case 3
                         SingleCount = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.rst")
                         SingleCount = SingleCount + 1
                         SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\3.csv")
-                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                     Case 4
                         SingleCount = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.rst")
                         SingleCount = SingleCount + 1
                         SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\4.csv")
-                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                     Case 5
                         SingleCount = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.rst")
                         SingleCount = SingleCount + 1
                         SingleData = File.ReadAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\5.csv")
-                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & "," & VarCentre.Userbase(1) & "," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
+                        SingleData = SingleData & Environment.NewLine & TimeOfDay & "," & "'" & VarCentre.Userbase(0) & ",""" & VarCentre.Userbase(1) & """," & VarCentre.Userbase(2) & "," & VarCentre.Userbase(4)
                 End Select
                 File.WriteAllText("\\" & VarCentre.Hostname & "\PemiluEVote\resultdata\masterdata.csv", MasterData)
                 Select Case VarCentre.Userbase(4)
