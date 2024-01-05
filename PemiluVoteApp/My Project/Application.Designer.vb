@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.PemiluVoteApp.StartPage
+            Me.MainForm = Global.PemiluVoteApp.DebugCentre
         End Sub
     End Class
 End Namespace

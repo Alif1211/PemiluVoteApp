@@ -23,8 +23,8 @@ Partial Class StatForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Jam = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NIPM = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,17 +38,17 @@ Partial Class StatForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -71,7 +71,7 @@ Partial Class StatForm
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.Size = New System.Drawing.Size(641, 385)
+        Me.DataGridView1.Size = New System.Drawing.Size(617, 385)
         Me.DataGridView1.TabIndex = 0
         '
         'Jam
@@ -116,7 +116,7 @@ Partial Class StatForm
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Pusat", "No. 1", "No. 2", "No. 3", "No. 4", "No. 5"})
-        Me.ComboBox1.Location = New System.Drawing.Point(656, 28)
+        Me.ComboBox1.Location = New System.Drawing.Point(635, 28)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox1.TabIndex = 1
@@ -124,9 +124,9 @@ Partial Class StatForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(653, 9)
+        Me.Label1.Location = New System.Drawing.Point(632, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(180, 13)
+        Me.Label1.Size = New System.Drawing.Size(202, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Pilih jenis hasil yang ingin anda lihat :"
         '
@@ -134,6 +134,7 @@ Partial Class StatForm
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -173,6 +174,56 @@ Partial Class StatForm
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bagan Hasil"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label6.Location = New System.Drawing.Point(734, 155)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 37)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label5.Location = New System.Drawing.Point(734, 62)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(32, 37)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "0"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label4.Location = New System.Drawing.Point(562, 248)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(32, 37)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "0"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label3.Location = New System.Drawing.Point(562, 155)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 37)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "0"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label2.Location = New System.Drawing.Point(562, 62)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 37)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "0"
         '
         'PictureBox3
         '
@@ -226,66 +277,16 @@ Partial Class StatForm
         '
         'Chart1
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea5)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
         Me.Chart1.Location = New System.Drawing.Point(6, 6)
         Me.Chart1.Name = "Chart1"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Name = "Jumlah Pemilih"
-        Me.Chart1.Series.Add(Series5)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Name = "Jumlah Pemilih"
+        Me.Chart1.Series.Add(Series2)
         Me.Chart1.Size = New System.Drawing.Size(469, 388)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label2.Location = New System.Drawing.Point(562, 62)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 31)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "0"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label3.Location = New System.Drawing.Point(562, 155)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 31)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "0"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label4.Location = New System.Drawing.Point(562, 248)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(29, 31)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "0"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label5.Location = New System.Drawing.Point(734, 62)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(29, 31)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "0"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label6.Location = New System.Drawing.Point(734, 155)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(29, 31)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "0"
         '
         'StatForm
         '

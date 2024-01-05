@@ -60,6 +60,7 @@ Partial Class ClientSetup
         '
         'Button1
         '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button1.Location = New System.Drawing.Point(12, 85)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 23)
@@ -69,6 +70,7 @@ Partial Class ClientSetup
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button2.Location = New System.Drawing.Point(135, 85)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 23)
@@ -79,6 +81,7 @@ Partial Class ClientSetup
         'Button3
         '
         Me.Button3.Enabled = False
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button3.Location = New System.Drawing.Point(258, 85)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(114, 23)

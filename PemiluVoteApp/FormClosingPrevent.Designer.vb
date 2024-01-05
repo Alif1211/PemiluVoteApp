@@ -65,7 +65,7 @@ Partial Class FormClosingPrevent
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormClosingPrevent"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormClosingPrevent"
+        Me.Text = "???"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

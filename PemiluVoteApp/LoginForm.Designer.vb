@@ -67,9 +67,9 @@ Partial Class LoginForm
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(7, 34)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(109, 21)
+        Me.Label9.Size = New System.Drawing.Size(130, 21)
         Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Kelas/Jabatan"
+        Me.Label9.Text = "Nama Perangkat"
         '
         'Label8
         '
@@ -80,9 +80,9 @@ Partial Class LoginForm
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(6, 6)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(176, 25)
+        Me.Label8.Size = New System.Drawing.Size(47, 25)
         Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Nama Santri/Guru"
+        Me.Label8.Text = "Jam"
         '
         'Panel1
         '
@@ -109,6 +109,7 @@ Partial Class LoginForm
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DebugOptions"
+        Me.GroupBox1.Visible = False
         '
         'Button4
         '
@@ -186,7 +187,7 @@ Partial Class LoginForm
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(828, 227)
+        Me.GroupBox2.Location = New System.Drawing.Point(761, 227)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(340, 147)
         Me.GroupBox2.TabIndex = 7
@@ -200,7 +201,7 @@ Partial Class LoginForm
         Me.Button5.Location = New System.Drawing.Point(232, 104)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(92, 34)
-        Me.Button5.TabIndex = 2
+        Me.Button5.TabIndex = 3
         Me.Button5.Text = "Login"
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -210,7 +211,7 @@ Partial Class LoginForm
         Me.TextBox2.Location = New System.Drawing.Point(98, 71)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(226, 27)
-        Me.TextBox2.TabIndex = 1
+        Me.TextBox2.TabIndex = 2
         Me.TextBox2.UseSystemPasswordChar = True
         '
         'TextBox1

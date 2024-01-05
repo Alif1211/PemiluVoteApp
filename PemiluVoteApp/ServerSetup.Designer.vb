@@ -173,6 +173,7 @@ Partial Class ServerSetup
         '
         'Button1
         '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button1.Location = New System.Drawing.Point(125, 146)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(93, 36)
@@ -182,6 +183,7 @@ Partial Class ServerSetup
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button2.Location = New System.Drawing.Point(124, 279)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(93, 36)
@@ -191,6 +193,7 @@ Partial Class ServerSetup
         '
         'Button3
         '
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button3.Location = New System.Drawing.Point(125, 413)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(93, 36)
@@ -200,6 +203,7 @@ Partial Class ServerSetup
         '
         'Button4
         '
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button4.Location = New System.Drawing.Point(574, 146)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(93, 36)
@@ -209,6 +213,7 @@ Partial Class ServerSetup
         '
         'Button5
         '
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button5.Location = New System.Drawing.Point(575, 279)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(93, 36)
@@ -218,6 +223,7 @@ Partial Class ServerSetup
         '
         'Button6
         '
+        Me.Button6.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button6.Location = New System.Drawing.Point(224, 146)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(93, 36)
@@ -227,6 +233,7 @@ Partial Class ServerSetup
         '
         'Button7
         '
+        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button7.Location = New System.Drawing.Point(224, 279)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(93, 36)
@@ -236,6 +243,7 @@ Partial Class ServerSetup
         '
         'Button8
         '
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button8.Location = New System.Drawing.Point(224, 413)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(93, 36)
@@ -245,6 +253,7 @@ Partial Class ServerSetup
         '
         'Button9
         '
+        Me.Button9.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button9.Location = New System.Drawing.Point(673, 146)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(93, 36)
@@ -254,6 +263,7 @@ Partial Class ServerSetup
         '
         'Button10
         '
+        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button10.Location = New System.Drawing.Point(674, 279)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(93, 36)
@@ -274,7 +284,7 @@ Partial Class ServerSetup
         'Button11
         '
         Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Button11.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.Button11.Location = New System.Drawing.Point(772, 440)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(129, 44)
@@ -285,7 +295,7 @@ Partial Class ServerSetup
         'Button12
         '
         Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Button12.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.Button12.Location = New System.Drawing.Point(637, 440)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(129, 44)
@@ -295,6 +305,7 @@ Partial Class ServerSetup
         '
         'Button13
         '
+        Me.Button13.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button13.Location = New System.Drawing.Point(323, 146)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(55, 36)
@@ -304,6 +315,7 @@ Partial Class ServerSetup
         '
         'Button14
         '
+        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button14.Location = New System.Drawing.Point(323, 279)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(55, 36)
@@ -313,6 +325,7 @@ Partial Class ServerSetup
         '
         'Button15
         '
+        Me.Button15.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button15.Location = New System.Drawing.Point(323, 413)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(55, 36)
@@ -322,6 +335,7 @@ Partial Class ServerSetup
         '
         'Button16
         '
+        Me.Button16.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button16.Location = New System.Drawing.Point(773, 146)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(55, 36)
@@ -331,6 +345,7 @@ Partial Class ServerSetup
         '
         'Button17
         '
+        Me.Button17.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button17.Location = New System.Drawing.Point(773, 279)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(55, 36)
@@ -340,6 +355,7 @@ Partial Class ServerSetup
         '
         'Button18
         '
+        Me.Button18.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button18.Location = New System.Drawing.Point(385, 113)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(77, 26)
@@ -349,6 +365,7 @@ Partial Class ServerSetup
         '
         'Button19
         '
+        Me.Button19.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button19.Location = New System.Drawing.Point(385, 247)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(77, 26)
@@ -358,6 +375,7 @@ Partial Class ServerSetup
         '
         'Button20
         '
+        Me.Button20.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button20.Location = New System.Drawing.Point(385, 382)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(77, 26)
@@ -367,6 +385,7 @@ Partial Class ServerSetup
         '
         'Button21
         '
+        Me.Button21.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button21.Location = New System.Drawing.Point(834, 114)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(77, 26)
@@ -376,6 +395,7 @@ Partial Class ServerSetup
         '
         'Button22
         '
+        Me.Button22.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Button22.Location = New System.Drawing.Point(834, 248)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(77, 26)
