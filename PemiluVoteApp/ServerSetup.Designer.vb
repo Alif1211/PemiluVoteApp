@@ -285,7 +285,7 @@ Partial Class ServerSetup
         '
         Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button11.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.Button11.Location = New System.Drawing.Point(772, 440)
+        Me.Button11.Location = New System.Drawing.Point(780, 440)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(129, 44)
         Me.Button11.TabIndex = 32
@@ -296,7 +296,7 @@ Partial Class ServerSetup
         '
         Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button12.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.Button12.Location = New System.Drawing.Point(637, 440)
+        Me.Button12.Location = New System.Drawing.Point(645, 440)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(129, 44)
         Me.Button12.TabIndex = 31
@@ -471,7 +471,7 @@ Partial Class ServerSetup
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(913, 496)
+        Me.ClientSize = New System.Drawing.Size(921, 496)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button12)

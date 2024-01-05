@@ -23,14 +23,9 @@ Partial Class StatForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Jam = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NIPM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Kelas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pilihan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -49,6 +44,11 @@ Partial Class StatForm
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Jam = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NIPM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Kelas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pilihan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -73,41 +73,6 @@ Partial Class StatForm
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.Size = New System.Drawing.Size(617, 385)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Jam
-        '
-        Me.Jam.HeaderText = "Jam"
-        Me.Jam.Name = "Jam"
-        Me.Jam.ReadOnly = True
-        Me.Jam.Width = 85
-        '
-        'NIPM
-        '
-        Me.NIPM.HeaderText = "NIPM"
-        Me.NIPM.Name = "NIPM"
-        Me.NIPM.ReadOnly = True
-        Me.NIPM.Width = 70
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nama"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 275
-        '
-        'Kelas
-        '
-        Me.Kelas.HeaderText = "Kelas/Jabatan"
-        Me.Kelas.Name = "Kelas"
-        Me.Kelas.ReadOnly = True
-        Me.Kelas.Width = 85
-        '
-        'Pilihan
-        '
-        Me.Pilihan.HeaderText = "Pilihan"
-        Me.Pilihan.Name = "Pilihan"
-        Me.Pilihan.ReadOnly = True
-        Me.Pilihan.Width = 45
         '
         'Timer1
         '
@@ -179,7 +144,7 @@ Partial Class StatForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label6.Location = New System.Drawing.Point(734, 155)
+        Me.Label6.Location = New System.Drawing.Point(734, 146)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(32, 37)
         Me.Label6.TabIndex = 4
@@ -189,7 +154,7 @@ Partial Class StatForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label5.Location = New System.Drawing.Point(734, 62)
+        Me.Label5.Location = New System.Drawing.Point(734, 53)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 37)
         Me.Label5.TabIndex = 4
@@ -199,7 +164,7 @@ Partial Class StatForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label4.Location = New System.Drawing.Point(562, 248)
+        Me.Label4.Location = New System.Drawing.Point(562, 239)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(32, 37)
         Me.Label4.TabIndex = 4
@@ -209,7 +174,7 @@ Partial Class StatForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label3.Location = New System.Drawing.Point(562, 155)
+        Me.Label3.Location = New System.Drawing.Point(562, 146)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 37)
         Me.Label3.TabIndex = 4
@@ -219,7 +184,7 @@ Partial Class StatForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label2.Location = New System.Drawing.Point(562, 62)
+        Me.Label2.Location = New System.Drawing.Point(562, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 37)
         Me.Label2.TabIndex = 4
@@ -277,16 +242,51 @@ Partial Class StatForm
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
         Me.Chart1.Location = New System.Drawing.Point(6, 6)
         Me.Chart1.Name = "Chart1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Name = "Jumlah Pemilih"
-        Me.Chart1.Series.Add(Series2)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Name = "Jumlah Pemilih"
+        Me.Chart1.Series.Add(Series3)
         Me.Chart1.Size = New System.Drawing.Size(469, 388)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
+        '
+        'Jam
+        '
+        Me.Jam.HeaderText = "Jam"
+        Me.Jam.Name = "Jam"
+        Me.Jam.ReadOnly = True
+        Me.Jam.Width = 85
+        '
+        'NIPM
+        '
+        Me.NIPM.HeaderText = "NIPM"
+        Me.NIPM.Name = "NIPM"
+        Me.NIPM.ReadOnly = True
+        Me.NIPM.Width = 70
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nama"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 275
+        '
+        'Kelas
+        '
+        Me.Kelas.HeaderText = "Kelas/Jabatan"
+        Me.Kelas.Name = "Kelas"
+        Me.Kelas.ReadOnly = True
+        Me.Kelas.Width = 85
+        '
+        'Pilihan
+        '
+        Me.Pilihan.HeaderText = "Pilihan"
+        Me.Pilihan.Name = "Pilihan"
+        Me.Pilihan.ReadOnly = True
+        Me.Pilihan.Width = 55
         '
         'StatForm
         '
@@ -296,6 +296,7 @@ Partial Class StatForm
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
         Me.Name = "StatForm"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hasil Pemilihan"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -320,11 +321,6 @@ Partial Class StatForm
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Jam As DataGridViewTextBoxColumn
-    Friend WithEvents NIPM As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Kelas As DataGridViewTextBoxColumn
-    Friend WithEvents Pilihan As DataGridViewTextBoxColumn
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
@@ -339,4 +335,9 @@ Partial Class StatForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Jam As DataGridViewTextBoxColumn
+    Friend WithEvents NIPM As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Kelas As DataGridViewTextBoxColumn
+    Friend WithEvents Pilihan As DataGridViewTextBoxColumn
 End Class

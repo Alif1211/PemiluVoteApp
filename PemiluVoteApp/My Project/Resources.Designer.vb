@@ -184,5 +184,25 @@ Namespace My.Resources
                 Return ResourceManager.GetString("masterdata", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property pergarus() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pergarus", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property uqi2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("uqi2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace

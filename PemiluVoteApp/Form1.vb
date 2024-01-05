@@ -173,17 +173,18 @@ Public Class Form1
                 Timer1.Stop()
                 MsgBox("Terima kasih karena sudah memilih calon ketua ISPA dengan Luberjurdil (Langsung, Bebas, Rahasia, Jujur, dan Adil)" & Environment.NewLine & Environment.NewLine & "(C) 2024, Alif Muhammad Mumtaaz", MsgBoxStyle.OkOnly, "Terima Kasih!")
                 TextBox1.Text = "Terima kasih telah menggunakan aplikasi e-Vote ini!
+Versi Lite ini mencakup fungsi dasar dari struktur pemilihan, Versi Pro (Rp. 199.000 ,-) mencakup semua fungsi yang lebih lanjut.
 
 Apabila ada masalah atau kendala yang terjadi pada aplikasi ini, silakan salin (copy) kode yang muncul di peringatan yang ada dan kirim kode tersebut kepada Admin (Alif Muhammad Mumtaaz) melalui berikut :
 
 WhatsApp : +6289661715192
 Instagram : @alif_mumtaaz
-Telegram : @AMM2112
+Telegram : @Artaemist
 Twitter/X : @alifmumtaaz"
                 PictureBox1.BackgroundImage = Nothing
                 Label6.Text = "Nama Calon"
                 ComboBox1.SelectedItem = Nothing
-                ComboBox1.Text = Nothing
+                ComboBox1.Text = "Pilih Calon Anda Disini     ==>"
                 Button1.Enabled = False
                 LoginForm.Show()
                 Hide()
